@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/transcribe_audio.iml" filepath="$PROJECT_DIR$/.idea/transcribe_audio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/whisper_vtt_converter.iml" filepath="$PROJECT_DIR$/.idea/whisper_vtt_converter.iml" />
     </modules>
   </component>
 </project>
