@@ -5,6 +5,7 @@
 
 import whisper
 
+
 def convert_audio(filepath):
     model = whisper.load_model("base")
     result = model.transcribe(filepath, language="pt", fp16=False, verbose=True)
