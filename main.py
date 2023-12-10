@@ -7,6 +7,7 @@ def convert_audio(file_path):
     model = whisper.load_model("base")
     result = model.transcribe(file_path, language="en", fp16=False, verbose=True)
 
+    # Generate the .vtt file
     save_target = file_path + '.vtt'
     with open(save_target, "w") as file:
         file.write('WEBVTT' + '\n' + '\n')
@@ -19,6 +20,12 @@ def convert_audio(file_path):
             file.write(str(start) + ' -->  ' + str(end) + '\n')
             file.write(segment['text'].strip() + '\n')
             file.write('\n')
+
+    # Generate the .txt file
+    save_target = file_path + '.txt'
+    with open(save_target, "w") as file:
+        file.write("Converted text:\n")
+        file.write(result['text'])
 
 
 def format_delta_time(seconds):
